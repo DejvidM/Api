@@ -6,7 +6,7 @@ function fiveHeads() {
     // your code here!
         let head = 0;
         let attempt = 0;
-        while(head < 5 && attempt < 50){
+        while(head < 5 && attempt < 100){
             attempt++;
             let result = tossCoin();
             console.log(`${result} in the moment . attempt${attempt}\n`);
