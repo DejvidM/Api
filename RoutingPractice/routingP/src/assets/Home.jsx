@@ -8,16 +8,16 @@ const Home = ({state,setState,color,setColor}) => {
 
     const handleSubmit = (e) =>{
         e.preventDefault(); 
-
         state && color 
-        ? isNaN(state)
-            ? navigate('/wordColor')
-            : navigate('/number')
-        : state 
-            ? isNaN(state)
-                ? navigate('/word')
-                : navigate('/number')
-        : ''
+        ? isNaN(state) 
+            ? navigate(`/${state}/${color}`)
+            : navigate(`/${state}`)
+        : state
+            ? navigate(`/${state}`)
+            : navigate(`/${state}`)
+            
+        setState(''); 
+        setColor('');
     }
     return (
         <>

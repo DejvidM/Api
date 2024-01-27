@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-const WordColor = ({state,setState,color,setColor}) => {
+const WordColor = (props) => {
     
+    const {word,color} = useParams();
     return(
         <>
-            <p style={{color : state , backgroundColor : color , padding : '20px'}}>The word is : {state}</p>
-            <Link to={'/'} onClick={() => {setColor(''); setState('')}}>Go to homepage</Link>
+            <p style={{color : word , backgroundColor : color , padding : '20px'}}>The word is : {word}</p>
+            <Link to={'/'} >Go to homepage</Link>
         </>
-
     )
 }
 
